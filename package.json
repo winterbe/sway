@@ -6,15 +6,15 @@
   "license": "MIT",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server -d",
-    "build": "node_modules/.bin/webpack -p"
+    "build": "node_modules/.bin/webpack -p",
+    "deploy": "yarn build && touch static/.nojekyll && gh-pages -d static -t"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.3",
+    "gh-pages": "^1.0.0",
     "typescript": "^2.5.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
